@@ -5,13 +5,15 @@
         "name": "Australia",
         "cities": [
           {
+            "id": "1",
             "name": "Sydney, Australia",
             "imageUrl": "sydney.jpg",
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
+            "id": "2",
             "name": "Melbourne, Australia",
-            "imageUrl": "melbourn.jpg",
+            "imageUrl": "melborn.jpg",
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
           }
         ]
@@ -21,11 +23,13 @@
         "name": "Japan",
         "cities": [
           {
+            "id": "3",
             "name": "Tokyo, Japan",
             "imageUrl": "tokyo.jpg",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
+            "id": "4",
             "name": "Kyoto, Japan",
             "imageUrl": "kyoto.jpg",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
@@ -37,11 +41,13 @@
         "name": "Brazil",
         "cities": [
           {
+            "id": "5",
             "name": "Rio de Janeiro, Brazil",
             "imageUrl": "rio.jpg",
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
           },
           {
+            "id": "6",
             "name": "São Paulo, Brazil",
             "imageUrl": "sao-paulo.jpg",
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
@@ -76,28 +82,29 @@
         "imageUrl": "copacabana.jpg",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
-    ]
+    ],
+    "teamMembers": [
+        {
+          "id": 1,
+          "name": "John Doe",
+          "details": "gfdhsa hfjs ak fsahilf sa",
+          "job": "CEO",
+          "img": ""
+        },
+        {
+          "id": 2,
+          "name": "Celina Thomas",
+          "details": "gds gds gds kjhgkgh re es",
+          "job": "Team lead",
+          "img": ""
+        },
+        {
+            "id": 3,
+            "name": "Mike Tyson",
+            "details": "fgds  hffd hf jgf jgf kjhg khgkghds gdsa",
+            "job": "Delivery head",
+            "img": ""
+          }
+      ]
   }
-  "teamMembers": [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "details": "gfdhsa hfjs ak fsahilf sa",
-      "job": "CEO",
-      "img": ""
-    },
-    {
-      "id": 2,
-      "name": "Celina Thomas",
-      "details": "gds gds gds kjhgkgh re es",
-      "job": "Team lead",
-      "img": ""
-    }
-    {
-        "id": 3,
-        "name": "Mike Tyson",
-        "details": "fgds  hffd hf jgf jgf kjhg khgkghds gdsa",
-        "job": "Delivery head",
-        "img": ""
-      }
-  ],
+  

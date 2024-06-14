@@ -1,8 +1,11 @@
-const addPatientButton = document.getElementById("addPatient");
-const report = document.getElementById("report");
+const teamResults = document.getElementById("teamResults");
 const btnSearch = document.getElementById('btnSearch');
-const patients = [];
-
+const btnReset = document.getElementById('btnReset');
+const countries = [];
+const temples = [];
+const beaches = [];
+const temMembers = [];
+/*
 function addPatient() {
     const name = document.getElementById("name").value;
     const gender = document.querySelector('input[name="gender"]:checked');
@@ -64,35 +67,31 @@ function addPatient() {
   }
 
 addPatientButton.addEventListener("click", addPatient);
+*/
+    function searchCountry() {
+        const input = document.getElementById('travelInput').value.toLowerCase();
+        const resultDiv = document.getElementById('countryList');
+        resultDiv.innerHTML = '';
 
-function searchCondition() {
-    const input = document.getElementById('conditionInput').value.toLowerCase();
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = '';
+        fetch('travel_recommendation_api.json')
+          .then(response => response.json())
+          .then(data => {
+            const country = data.countries.find(item => item.name.toLowerCase() === input);
 
-    fetch('health_analysis.json')
-      .then(response => response.json())
-      .then(data => {
-        const condition = data.conditions.find(item => item.name.toLowerCase() === input);
-
-        if (condition) {
-          const symptoms = condition.symptoms.join(', ');
-          const prevention = condition.prevention.join(', ');
-          const treatment = condition.treatment;
-
-          resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
-          resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
-
-          resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
-          resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
-          resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
-        } else {
-          resultDiv.innerHTML = 'Condition not found.';
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        resultDiv.innerHTML = 'An error occurred while fetching data.';
-      });
-  }
-    btnSearch.addEventListener('click', searchCondition);
+            if (country) {
+              const name = country.name;
+              const cities = country.cities;
+              cities.forEach((city) => {
+                resultDiv.innerHTML += `<div class='countryDiv'><img class='cityImg' src='${city.imageUrl}'><p class='cityName'>${city.name}</p><p class='cityDesc'>${city.description}</p><button class='cityBtn' id='city${city.id}'>Visit</button></div>`;
+                });
+              
+            } else {
+              resultDiv.innerHTML = 'Country not found.';
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            resultDiv.innerHTML = 'An error occurred while fetching data.';
+          });
+      }
+        btnSearch.addEventListener('click', searchCountry);
