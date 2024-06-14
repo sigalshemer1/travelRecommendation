@@ -78,4 +78,26 @@
       }
     ]
   }
-  
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "details": "gfdhsa hfjs ak fsahilf sa",
+      "job": "CEO",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "Celina Thomas",
+      "details": "gds gds gds kjhgkgh re es",
+      "job": "Team lead",
+      "img": ""
+    }
+    {
+        "id": 3,
+        "name": "Mike Tyson",
+        "details": "fgds  hffd hf jgf jgf kjhg khgkghds gdsa",
+        "job": "Delivery head",
+        "img": ""
+      }
+  ],

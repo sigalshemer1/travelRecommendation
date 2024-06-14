@@ -24,7 +24,16 @@
 
 /*Logo*/
 #leftLogo{
-    width:150PX;
+    width:130PX;
+    display:inline-block;
+}
+
+#leftLogo div{
+    color:#fff;
+    font-size:12px;
+    float:right;
+    margin-top:-15px;
+    padding:0;
 }
 #homeLogo{
     background-image: url('./travel.png');
@@ -55,7 +64,9 @@ nav {
     /* padding: 0; */
   }
   #topMenu{
-    display:inline;
+    display:inline-block;
+    margin-left:50px;
+    width:200px;
   }
   
   nav ul li {
