@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel recommendation</title>
+  <link rel="stylesheet" href="./health_analysis.css">
+</head>
+<body>
+   <nav>
+        <div id="leftLogo">
+            <a href="./index.html" id="homeLogo">Travel bloom</a>
+        </div>
+        <ul>
+            
+            <li><a href="./index.html" id="home">Home </a></li>
+            <li><a href="./health_contact.html" id="contact">Contact Us </a></li>
+            <li><input type="text" id="conditionInput" placeholder="Enter a health condition">  </li>
+            <li><button id='btnSearch'>Search</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <label for="condition">Condition:</label>
+
+        <button id="addPatient">Add Patient</button>
+        <h2>Analysis Report</h2>
+        <div id="report"></div>
+        </div>
+        <div class="searchCondition">
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="./health_analysis.js"></script>
+</body>
+</html>
