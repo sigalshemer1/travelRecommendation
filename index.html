@@ -3,35 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Travel recommendation</title>
-  <link rel="stylesheet" href="./health_analysis.css">
+  <link rel="stylesheet" href="./travel.css">
 </head>
 <body>
    <nav>
         <div id="leftLogo">
-            <a href="./index.html" id="homeLogo">Travel bloom</a>
+            <a href="./index.html" id="homeLogo"></a>
+            <div>Travel bloom</div>
         </div>
-        <ul>
-            <li><a href="./index.html" id="home">Home </a></li>
-            <li><a href="./about.html" id="about">About Us </a></li>
-            <li><a href="./contact.html" id="contact">Contact Us </a></li>
-            <li><input type="text" id="conditionInput" placeholder="Enter a health condition">  </li>
-        </ul>
+        |<div id="topMenu">
+            <ul>
+                <li><a href="./index.html" id="home">Home </a></li>
+                <li><a href="./about.html" id="about">About Us </a></li>
+                <li><a href="./contact.html" id="contact">Contact Us </a></li>
+            </ul>
+        </div>
         <div id="rgtTopPannel">
+            <input type="text" id="travelInput" placeholder="Enter a destination or keyword">
+            <img id="magnifyingGlass" src="./magnifyingGlass.png">
             <button id='btnSearch'>Search</button>
             <button id='btnReset'>Reset</button>
         </div>
     </nav>
     <div class="container">
-        <label for="condition">Condition:</label>
-
-        <button id="addPatient">Add Patient</button>
-        <h2>Analysis Report</h2>
-        <div id="report"></div>
+        <div id="socialBtns">
+            <a href="tweeter.com" class="socialBtnsCls" id="tweeter"> </a>
+            <a href="facebook.com" class="socialBtnsCls" id="facebook"> </a>
+            <a href="intsegram.com" class="socialBtnsCls" id="intsegram"> </a>
+            <a href="youtube.com" class="socialBtnsCls" id="youtube"> </a>
         </div>
-        <div class="searchCondition">
-            <div id="result"></div>
+        <div id="midContent">
+            <div id="leftMidCont">
+                <h2>EXPLORE<br>DREAM<br>DESTINATION</h2>
+                <p>
+                    Our specialized departments offer a diversity of services.<br>
+                    Every department works independently to provide<br>
+                    the best service to our customers, <br>
+                    targeting their friendship and a long lasting relationship.
+                </p>
+                <button id='btnBook'>Book now</button>
+            </div>
         </div>
     </div>
-    <script src="./health_analysis.js"></script>
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>
