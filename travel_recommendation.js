@@ -94,4 +94,13 @@ addPatientButton.addEventListener("click", addPatient);
             resultDiv.innerHTML = 'An error occurred while fetching data.';
           });
       }
+
+      function resetCountry(){
+        const resultDiv = document.getElementById('countryList');
+        resultDiv.innerHTML = '';
+        document.getElementById('travelInput').value='';
+        
+      }
         btnSearch.addEventListener('click', searchCountry);
+
+        btnReset.addEventListener('click', resetCountry);
